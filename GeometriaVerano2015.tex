@@ -125,7 +125,23 @@ Ahora bien, notemos que los abiertos básicos $D_f = V(f)^c$ son también cerrad
 
 Veamos entonces que si $A$ es booleano, entonces $\spec A$ es compacto Hausdorff y totalmente disconexo. Sabemos que $\spec A$ es quasi-compacto para cualquier anillo $A$. Sean $\mathfrak{m},\mathfrak{n}\in\spec A$ dos puntos y separémoslos con dos abiertos disjuntos. Debe existir $x\in \mathfrak{m}\backslash \mathfrak{n}$ (pues no pueden estar contenidos por ser ideales maximales). Luego, $x\in \mathfrak{m}$ pero $x\notin\mathfrak{n}$. Dicho de otra forma, esto implica que el punto $\mathfrak{n}\in D_{x}$ y $\mathfrak{m}\notin D_x$. Ahora bien, como $x(1-x)=0\in\mathfrak{n}$ y $x\notin\mathfrak{n}$, debemos tener que $1-x\in\mathfrak{n}$. Además, $1-x\notin\mathfrak{m}$ porque si no $1 = x + 1-x$ estaría en $\mathfrak{m}$. Es decir, el punto $\mathfrak{m}\in D_{1-x}$ y $\mathfrak{n}\in D_{1-x}$. Finalmente, como vimos, tenemos que $D_x = V(1-x)^c$ y $D_{1-x} = V(x)^c$. Entonces, a cada par de puntos los pudimos separar por abiertos disjuntos. Pero no sólo eso, sino en conjuntos que son abiertos y cerrados a la vez y que cubren todo $\spec A$. Es decir, a cualquier par de puntos los pudimos poner en componentes conexas distintas. Esto implica que $\spec A$ es totalmente disconexo.
 
-Para concluir, veamos que $X\mapsto \mathscr{C}_{\FF_2}(X)$ (donde $\mathscr{C}_{\FF_2}(X)$ es la $\FF_2$-álgebra de funciones continuas de $X$ en $\FF_2$ con la topología discreta) es una quasi-inversa para la asignación $A\mapsto \spec A$, lo que nos probará que es una equivalencia categórica. Claramente, para cualquier espacio topológico, $\mathscr{C}_{\FF_2}(X)$ es un anillo booleano gracias a que la multiplicación y suma de funciones se define punto a punto. Es decir, si $f:X\to\FF_2$ es una función continua, $f^2(x) = f(x)f(x) = f(x)$ por ser $f(x)\in\FF_2$ que es booleano. Sólo nos resta ver que $\mathscr{C}_{\FF_2}(\spec(A)) \simeq A$ y que $\spec(\mathscr{C}_{\FF_2}(X))\simeq X$. Para ver lo primero, simplemente notamos que para ver las funciones continuas de un espacio topológico a $\FF_2$ debemos restringirnos a las componentes conexas, y en este caso, como es totalmente disconexo, a cada punto.
+Para concluir, veamos que $X\mapsto \mathscr{C}_{\FF_2}(X)$ (donde $\mathscr{C}_{\FF_2}(X)$ es la $\FF_2$-álgebra de funciones continuas de $X$ en $\FF_2$ con la topología discreta) es una quasi-inversa para la asignación $A\mapsto \spec A$, lo que nos probará que es una equivalencia categórica. Claramente, para cualquier espacio topológico, $\mathscr{C}_{\FF_2}(X)$ es un anillo booleano gracias a que la multiplicación y suma de funciones se define punto a punto. Es decir, si $f:X\to\FF_2$ es una función continua, $f^2(x) = f(x)f(x) = f(x)$ por ser $f(x)\in\FF_2$ que es booleano. Sólo nos resta ver que $\mathscr{C}_{\FF_2}(\spec(A)) \simeq A$ y que $\spec(\mathscr{C}_{\FF_2}(X))\simeq X$.
+
+Para ver lo primero consideramos el morfismo $\psi : A \to \mathscr{C}_{\FF_2}(\spec(A))$ tal que
+$\psi : a\mapsto (\mathfrak{p}\mapsto a (\mod \mathfrak{p})$. Esto cae en $\FF_2$ pues vimos, en el primer punto, 
+que el cociente por un primo es siempre $\FF_2$.
+Para la inyectividad notamos que si un elemento es $0$ m\'odulo todo primo, entonces ese elemento es nilpotente.
+Pero un anillo booleano no tiene nilpotentes no triviales, por definici\'on.
+Para la sobreyectividad, sea $f : \spec(A) \to \FF_2$ continua. Claramente $f$ queda determinada por $C_0 = f^{-1}(0)$ y $C_1 = f^{-1}(1)$.
+Por lo tanto estamos buscando $a\in A$ tal que:
+\begin{itemize}
+  \item $a\equiv 0 (\mod \mathfrak{p}) \forall \mathfrak{p} \in C_0$
+  \item $a\equiv 1 (\mod \mathfrak{p}) \forall \mathfrak{p} \in C_1$
+\end{itemize}
+Los conjuntos $C_0,C_1$ son una partici\'on, abiertos y cerrados y m\'as a\'un, compactos, por las observaciones anteriores.
+Luego, de lo que se dedujo anteriorimente, de desprende que ambos conjuntos son $D_{a_0}$ y $D_{a_1}$ respectivamente,
+para ciertos $a_0,a_1\in A$.
+Queda claro, entonces, que $\psi(a_1) = f$. Notar que utilizamos $a_1$, pues $D_{a_1} = V(a_0)$.
 
 
 \end{proof}
