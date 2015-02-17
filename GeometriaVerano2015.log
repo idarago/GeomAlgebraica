@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.2.9)  17 FEB 2015 16:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.2.9)  17 FEB 2015 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -943,8 +943,24 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 116.
- [2] [3] (./GeometriaVerano2015.aux
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 124.
+ [2]
+Overfull \hbox (2.37523pt too wide) in paragraph at lines 154--159
+[]\OT1/ppl/m/n/10.95 Mostremos aho-ra el ho-meo-mor-fis-mo. Con-si-de-ra-mos $\
+OML/zplm/m/it/10.95 ^^^ \OT1/zplm/m/n/10.95 : \OML/zplm/m/it/10.95 X \OMS/zplm/
+m/n/10.95 ! []\OT1/zplm/m/n/10.95 (\U/rsfs/m/n/10.95 C[]\OT1/zplm/m/n/10.95 (\O
+ML/zplm/m/it/10.95 X\OT1/zplm/m/n/10.95 ))$
+ []
+
+[3]
+Overfull \hbox (17.70853pt too wide) in paragraph at lines 170--173
+[]\OT1/ppl/m/n/10.95 La so-bre-yec-ti-vi-dad es m[]as in-tere-san-te. Da-do un 
+$\U/euf/m/n/10.95 p$ \OT1/ppl/m/n/10.95 ideal pri-mo de $[]\OT1/zplm/m/n/10.95 
+(\U/rsfs/m/n/10.95 C[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 X\OT1/zplm/m/n/
+10.95 ))$\OT1/ppl/m/n/10.95 ,
+ []
+
+[4] (./GeometriaVerano2015.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
@@ -968,10 +984,10 @@ ts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
 ist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw
 /palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on GeometriaVerano2015.pdf (3 pages, 115287 bytes).
+Output written on GeometriaVerano2015.pdf (4 pages, 120130 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

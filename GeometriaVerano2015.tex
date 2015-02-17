@@ -112,6 +112,14 @@ $(3)\Longrightarrow (2)$: Claramente tomando $e_1= (1,0)$ y $e_2=(0,1)$ cumplimo
 \end{proof}
 \end{prop}
 
+
+\begin{lem}[Espacios de Stone]
+Dado un espacio topol\'ogico $X$, compacto, $T_2$ y totalmente disconexo, y dados
+dos puntos $x,y \in X$, existe una partici\'on del espacio en dos
+conjuntos abiertos y cerrados, tal que $x$ pertenece al primer conjunto
+e $y$ al segundo
+\end{lem}
+
 \begin{prop}
 Un anillo $A$ se dice \textbf{booleano} si $a^2 = a$ para todo $a\in A$. Sea $A$ un anillo booleano y $X=\spec(A)$.
 \begin{enumerate}
@@ -142,6 +150,44 @@ Los conjuntos $C_0,C_1$ son una partici\'on, abiertos y cerrados y m\'as a\'un, 
 Luego, de lo que se dedujo anteriorimente, de desprende que ambos conjuntos son $D_{a_0}$ y $D_{a_1}$ respectivamente,
 para ciertos $a_0,a_1\in A$.
 Queda claro, entonces, que $\psi(a_1) = f$. Notar que utilizamos $a_1$, pues $D_{a_1} = V(a_0)$.
+
+Mostremos ahora el homeomorfismo.
+Consideramos $\phi : X \to \spec(\mathscr{C}_{\FF_2}(X))$ tal que
+$\phi : x \mapsto \{ f : f(x) = 0 \}$. Es muy simple chequear que
+esta funci\'on (en principio de conjuntos) est\'a bien definida.
+Veamos que es una biyecci\'on y luego demostremos que es homeomorfismo.
+
+
+Comenzamos con la inyectividad.
+Dados dos puntos $x,y\in X$ tomamos una partici\'on como la del lema de los
+espacios de Stone.
+Luego, las funciones caracter\'isticas de los conjuntos son continuas,
+pues los conjuntos son abiertos y cerrados. Claramente cada funci\'on
+pertenece a la imagen por $\phi$ de un punto, pero no a la imagen por
+$\phi$ del otro.
+Esto prueba que las im\'agenes son distintas.
+
+La sobreyectividad es m\'as interesante. Dado un $\mathfrak{p}$ ideal
+primo de $\spec(\mathscr{C}_{\FF_2}(X))$, veamos que el conjunto de los
+puntos donde se anulan todas las funciones del ideal:
+$$ C = \{x\in X : f(x) = 0, \forall f \in \mathfrak{p}\}$$
+contiene uno y s\'olo un punto $x$. Luego este $x$ tendr\'a como imagen al ideal $\mathfrak{p}$.
+Supongamos que el conjunto $C$ es vac\'io. Luego $\{f^{-1}(1) : f \in \mathfrak{p}\}$ es un
+cubrimiento por abiertos de $X$. Al ser $X$ compacto, podemos obtener un subcubrimiento finito,
+indexado por $f_1,\ldots,f_n$. Pero ahora, constuiremos a la funci\'on constantemente
+$1$, a partir de estas funciones. Notamos que, dadas $f_i,f_j$, la funci\'on $f_i + f_j + f_i * f_j$ toma
+el valor $1$ en todos los puntos donde alguna de las dos funciones originales tomaban el valor $1$.
+Luego, inductivamente, haciendo este procedimiento con las $f_1,\ldots,f_n$, obtenemo
+la funci\'on constantemente $1$, que es la unidad del anillo. Por lo tanto $\mathfrak{p}$ no es
+un ideal propio.
+Veamos ahora que $C$ contiene un \'unico punto. Si todas las funciones del ideal se anularan en dos
+puntos distintos $x$ e $y$ tomamos, nuevamente, una partici\'on como la del lema.
+Es claro que las funciones caracter\'isticas de los dos conjuntos de la partici\'on,
+en el cociente por $\mathfrak{p}$, no son nulas. Pero su producto
+claramente lo es, pues de hecho es nulo antes de concientar. Luego $\mathfrak{p}$ no podr\'ia ser
+primo.
+
+Concluyamos probando que la funci\'on definida es un homeomorfismo.
 
 
 \end{proof}
