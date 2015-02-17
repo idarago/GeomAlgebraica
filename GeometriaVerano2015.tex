@@ -1,0 +1,134 @@
+\documentclass[11pt,a4paper, spanish,oneside,fleqn]{article}
+\usepackage{picture}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[activeacute, spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage[pdftex]{color, graphicx}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc}
+\usetikzlibrary{matrix}
+
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{subfig}
+
+\usepackage{makeidx}
+
+
+\newtheorem{teo}{Teorema}[]
+\newtheorem{lem}[teo]{Lema}
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{cor}[teo]{Corolario}
+
+\theoremstyle{definition}
+\newtheorem{prob}[teo]{Problema}
+\newtheorem{conj}[teo]{Conjetura}
+\newtheorem{obs}[teo]{Observación}
+\newtheorem{defn}[teo]{Definición}
+\newtheorem{ax}[teo]{Axioma}
+\newtheorem{ex}[teo]{Ejemplo}
+
+\newcommand{\bd}[1]{\mathbf{#1}}  % for bolding symbols
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}      % for Real numbers
+\newcommand{\ZZ}{\mathbb{Z}}      % for Integers
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\mm}{\mathfrak{m}}
+\newcommand{\col}[1]{\left[\begin{matrix} #1 \end{matrix} \right]}
+\newcommand{\comb}[2]{\binom{#1^2 + #2^2}{#1+#2}}
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\hom}{\mathrm{Hom}}
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\mcd}{mcd}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\sg}{sg}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\rank}{rk}
+\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\car}{car}
+\DeclareMathOperator{\Nil}{Nil}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\spec}{Spec}
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\ann}{Ann}
+\DeclareMathOperator{\Gal}{Gal}
+\def\acts{\curvearrowright}
+\def\stca{\curvearrowleft}
+
+\parindent 0 em
+\parskip 0.6em
+
+\renewcommand{\qed}{\hfill \mbox{\raggedright \rule{0.075in}{0.075in}}}
+\renewcommand{\thefootnote}{[\arabic{footnote}]}
+
+\begin{document}
+
+\begin{lem}[Zariski]
+Sea $k$ un cuerpo y $E$ una $k$-álgebra finitamente generada. Si $E$ es un cuerpo, entonces $E/k$ es una extensión finita.
+\end{lem}
+
+\begin{prop}
+Sea $k$ un cuerpo y sea $\varphi:A\to B$ un morfismo de $k$-álgebras finitamente generadas. Luego, la imagen de un punto cerrado por el morfismo inducido $\spec(\varphi)$ es un punto cerrado.
+\begin{proof}
+Sea $\mathfrak{m}$ un ideal maximal de $B$. Queremos ver que $\varphi^{-1}(\mathfrak{m})$ es un ideal maximal de $A$. Notemos que $k\hookrightarrow A/\varphi^{-1}(\mathfrak{m})$. Por el Lema de Zariski, resulta que $B/\mathfrak{m}$ es una extensión finita de $k$, y así en particular algebraica. Como $A/\varphi^{-1}(\mathfrak{m})$ es un subanillo de $B/\mathfrak{m}$ que contiene a $k$ debe ser un cuerpo y así $\varphi^{-1}(\mathfrak{m})$ debe ser un ideal maximal.
+\end{proof}
+\end{prop}
+
+\begin{prop}
+Sea $A$ un anillo (conmutativo y con unidad). Son equivalentes:
+\begin{enumerate}
+\item $\spec(A)$ es disconexo.
+\item Existen elementos no nulos $e_1,e_2\in A$ tales que $e_1e_2 = 0$ y $e_1+e_2=1$ (estos elementos se llaman idempotentes ortogonales).
+\item $A$ es isomorfo a un producto directo $A_1\times A_2$ de anillos no nulos.
+\end{enumerate}
+\begin{proof}
+$(1)\Longrightarrow (3)$: Supongamos que $\spec(A)$ es disconexo. Luego, podemos escribir $\spec(A) = V(\mathfrak{a}) \cup V(\mathfrak{b})$ donde $V(\mathfrak{a})$ y $V(\mathfrak{b})$ son cerrados (y abiertos) disjuntos. Como son cerrados en $\spec(A)$ que es quasi-compacto, deben ser quasi-compactos. Además, como son abiertos, los podemos escribir como unión de los abiertos básicos. Pero en virtud de la compacidad, deben ser una unión finita de abiertos básicos. Esto implica que $V(\mathfrak{a}) = \displaystyle\bigcup_{i=1}^r V(f_i)^c = \left(\displaystyle\bigcap_{i=1}^r V(f_i)\right)^c = V(f_1 + \ldots + f_r)^c$. Es decir, $V(\mathfrak{b}) = V(f_1 + \ldots + f_r)$. Luego, podemos suponer, sin pérdida de la generalidad, que $\mathfrak{a}$ y $\mathfrak{b}$ son finitamente generados.
+
+Ahora bien, notemos que $V(\mathfrak{a})\cap V(\mathfrak{b}) = V(\mathfrak{a}+\mathfrak{b}) = \emptyset$ y así $\mathfrak{a}+\mathfrak{b}=A$. De manera análoga, podemos ver que $V(\mathfrak{a})\cup V(\mathfrak{b}) = V(\mathfrak{a}\mathfrak{b})$ y así tomando el ideal a ambos lados vemos que $\rad \mathfrak{a}\mathfrak{b} = \Nil A$. Como son ideales finitamentes generados, debe existir $n\in\NN$ tal que $(\mathfrak{a}\mathfrak{b})^n = 0$.
+
+Consideremos entonces $a\in\mathfrak{a}, b\in\mathfrak{b}$ tales que $a+b=1$. Notemos que al desarrollar $1 = (a+b)^{2n}$, cada sumando está en $\mathfrak{a}^n$ o en $\mathfrak{b}^n$. Por lo tanto, $1 \in \mathfrak{a}^n + \mathfrak{b}^n$, y así $\mathfrak{a}^n + \mathfrak{b}^n = A$. Además, $\mathfrak{a}^n\mathfrak{b}^n = (\mathfrak{a}\mathfrak{b})^n = 0$, y así son ideales coprimos con intersección trivial. Por Teorema Chino del Resto, tenemos que $A \simeq A/\mathfrak{a}^n \times A/\mathfrak{b}^n$. Como queríamos.
+
+$(3)\Longrightarrow (1)$: Simplemente notamos que $V(\langle (1,0)\rangle)$ y $V(\langle (0,1)\rangle)$ desconectan a $\spec(A)$. En efecto, $V(\langle (1,0)\rangle) \cup V(\langle (0,1)\rangle) = V(0) = \spec(A)$ y tenemos que $V(\langle (1,0)\rangle)\cap V(\langle (0,1)\rangle) = V(\langle (1,1)\rangle) = \emptyset$.
+
+$(2)\Longrightarrow (3)$: Es trivial en virtud del Teorema Chino del Resto. En efecto, consideramos los ideales $\langle e_1\rangle$ y $\langle e_2\rangle$. Son coprimos pues $e_1 + e_2=1$ y así $\langle e_1\rangle + \langle e_2\rangle = A$. Además, su intersección es trivial pues al ser coprimos es el producto y $e_1e_2=0$. Y listo.
+
+$(3)\Longrightarrow (2)$: Claramente tomando $e_1= (1,0)$ y $e_2=(0,1)$ cumplimos lo deseado. Y estamos.
+\end{proof}
+\end{prop}
+
+\begin{prop}
+Un anillo $A$ se dice \textbf{booleano} si $a^2 = a$ para todo $a\in A$. Sea $A$ un anillo booleano y $X=\spec(A)$.
+\begin{enumerate}
+\item Todo ideal primo $\mathfrak{p}\subseteq A$ es maximal y $A/\mathfrak{p}\simeq \FF_2$. Deducir que la asignación $\varphi\mapsto \ker\varphi$ define una biyección entre morfismos de anillos $A\to \FF_2$ y $\spec(A)$.
+\item El espacio $X$ es compacto Hausdorff y totalmente disconexo y la asignación $A\mapsto \spec A$ define una equivalencia entre la categoría de anillos booleanos y la categoría de espacios compactos Hausdorff totalmente disconexos. 
+\end{enumerate}
+\begin{proof}
+Sea $\mathfrak{p}$ un ideal primo de $A$. Luego, si $x\notin \mathfrak{p}$, veamos que $(x)+\mathfrak{p} = A$. Como $x(1-x) = 0\in\mathfrak{p}$ y $x\notin \mathfrak{p}$, debemos tener que $1-x\in\mathfrak{p}$. Por lo tanto, $1 = x + 1-x \in (x) + \mathfrak{p}$, y así todo ideal primo debe ser maximal. Además, $A/\mathfrak{p}$ es un dominio íntegro booleano. Si $x,y\in A/\mathfrak{p}$ con $x,y$ no nulos, entonces $xy(x-y)=0$. Además, $xy \neq 0$ pues $x,y\neq 0$ y es un dominio íntegro. Entonces, debemos tener que $x-y=0$. Es decir sólo tenemos un elemento no nulo en $A/\mathfrak{p}$ y así debe ser isomorfo a $\FF_2$.
+
+Ahora bien, notemos que los abiertos básicos $D_f = V(f)^c$ son también cerrados en $\spec A$. Esto simplemente proviene de notar que $f(1-f)=0$ para cada $f\in A$ y así $\spec A = V(f) \cup V(1-f)$ que son trivialmente disjuntos. Por lo tanto $D_f = V(1-f)$ es cerrado. Además, estos son los únicos subconjuntos de $\spec A$ que son abiertos y cerrados a la vez. En efecto, si $Y\subseteq \spec A$ es abierto y cerrado, al ser cerrado en un quasi-compacto, debe ser quasi-compacto. Por otra parte, es unión de los abiertos básicos, y por la quasi-compacidad, debe ser una unión finita. Luego, tenemos que $Y=D_{f_1}\cup\ldots\cup D_{f_r}$. Pero $D_{f_1}\cup\ldots \cup D_{f_r} = V((f_1)+\ldots + (f_r))^c$. Pero notemos que todo ideal finitamente generado de un anillo booleano debe ser principal. En efecto, esto sigue de notar que $(x,y) = (x+y+xy)$ y hacer inducción en la cantidad de generadores. Luego, existe $f\in A$ tal que $(f_1)+\ldots + (f_r) = (f)$, y así $Y = D_f$.
+
+Veamos entonces que si $A$ es booleano, entonces $\spec A$ es compacto Hausdorff y totalmente disconexo. Sabemos que $\spec A$ es quasi-compacto para cualquier anillo $A$. Sean $\mathfrak{m},\mathfrak{n}\in\spec A$ dos puntos y separémoslos con dos abiertos disjuntos. Debe existir $x\in \mathfrak{m}\backslash \mathfrak{n}$ (pues no pueden estar contenidos por ser ideales maximales). Luego, $x\in \mathfrak{m}$ pero $x\notin\mathfrak{n}$. Dicho de otra forma, esto implica que el punto $\mathfrak{n}\in D_{x}$ y $\mathfrak{m}\notin D_x$. Ahora bien, como $x(1-x)=0\in\mathfrak{n}$ y $x\notin\mathfrak{n}$, debemos tener que $1-x\in\mathfrak{n}$. Además, $1-x\notin\mathfrak{m}$ porque si no $1 = x + 1-x$ estaría en $\mathfrak{m}$. Es decir, el punto $\mathfrak{m}\in D_{1-x}$ y $\mathfrak{n}\in D_{1-x}$. Finalmente, como vimos, tenemos que $D_x = V(1-x)^c$ y $D_{1-x} = V(x)^c$. Entonces, a cada par de puntos los pudimos separar por abiertos disjuntos. Pero no sólo eso, sino en conjuntos que son abiertos y cerrados a la vez y que cubren todo $\spec A$. Es decir, a cualquier par de puntos los pudimos poner en componentes conexas distintas. Esto implica que $\spec A$ es totalmente disconexo.
+
+Para concluir, veamos que $X\mapsto \mathscr{C}_{\FF_2}(X)$ (donde $\mathscr{C}_{\FF_2}(X)$ es la $\FF_2$-álgebra de funciones continuas de $X$ en $\FF_2$ con la topología discreta) es una quasi-inversa para la asignación $A\mapsto \spec A$, lo que nos probará que es una equivalencia categórica. Claramente, para cualquier espacio topológico, $\mathscr{C}_{\FF_2}(X)$ es un anillo booleano gracias a que la multiplicación y suma de funciones se define punto a punto. Es decir, si $f:X\to\FF_2$ es una función continua, $f^2(x) = f(x)f(x) = f(x)$ por ser $f(x)\in\FF_2$ que es booleano. Sólo nos resta ver que $\mathscr{C}_{\FF_2}(\spec(A)) \simeq A$ y que $\spec(\mathscr{C}_{\FF_2}(X))\simeq X$. Para ver lo primero, simplemente notamos que para ver las funciones continuas de un espacio topológico a $\FF_2$ debemos restringirnos a las componentes conexas, y en este caso, como es totalmente disconexo, a cada punto.
+
+
+\end{proof}
+\end{prop}
+
+\end{document}
