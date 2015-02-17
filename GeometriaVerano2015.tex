@@ -118,6 +118,39 @@ Dado un espacio topol\'ogico $X$, compacto, $T_2$ y totalmente disconexo, y dado
 dos puntos $x,y \in X$, existe una partici\'on del espacio en dos
 conjuntos abiertos y cerrados, tal que $x$ pertenece al primer conjunto
 e $y$ al segundo
+\begin{proof}
+Dado $X$ espacio topol\'ogico, definimos una relaci\'on de equivalencia. $x$ est\'a
+relacionado con $y$ sii $X$ no tiene una partici\'on en dos conjuntos abiertos y
+cerrados tales que $x$ pertenece a uno e $y$ al otro. Es claro que la clase de
+equivalencia de un $x$ es la intersecci\'on de todos los conjuntos abiertos y
+cerrados que lo contienen. A la clases de equivalencia se las denomina ``cuasi-componentes''.
+
+Por otro lado, es claro que la componente conexa de un elemento se encuentra incluida
+en la cuasi componente de ese mismo elemento. Pero la contenci\'on puede ser propia
+en general. Mostremos que en los espacios de Stone, se da siempre la igualdad.
+Para esto, probaremos que la cuasi-componente $C$ de un elemento arbitrario es conexa.
+
+Supongamos que $C = X_1 \cup X_2$, disjuntos, abiertos y cerrados.
+Como $C$ es cerrado en $X$ (intersecci\'on de cerrados), $X_1$ y $X_2$ son cerrados
+en $X$.
+Como los espacios $T_2$ y compactos son normales, podemos separar a $X_1$ de $X_2$
+mediante dos conjuntos abiertos $Y_1,Y_2$. Adem\'as $C$ queda contenido en $Y_1 \cup Y_2$.
+Por compacidad de $C$ tenemos finitos $F_1,\ldots,F_n$ abiertos y cerrados tales que
+$Q\subseteq F \subseteq Y_1 \cup Y_2$. Donde $F$ es la intersecci\'on de los $F_i$.
+Claramente $F$ es abierto y cerrado, pues los finitos $F_i$ lo son.
+
+Ahora, como $x\in Y_1\cap F$, tenemos $C \subseteq Y_1\cap F$. Y, por lo tanto
+$X_2 \subseteq C \subseteq Y_1 \cap F \subseteq Y_1$.
+Luego, $X_2 \subseteq Y_1 \cap Y_2 = \emptyset$. Por lo tanto, $C$ es conexo.
+
+Sabiendo que la cuasi-componente coincide con la componente conexa de un elemento,
+tomando dos elementos en componentes distintas, podemos separarlos con dos abiertos
+y cerrados.
+
+Al ser el espacio totalemente disconexo, esto puede ser hecho con cualquier par
+de puntos distintos.
+
+\end{proof}
 \end{lem}
 
 \begin{prop}
