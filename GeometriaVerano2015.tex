@@ -128,16 +128,24 @@ cerrados que lo contienen. A la clases de equivalencia se las denomina ``cuasi-c
 Por otro lado, es claro que la componente conexa de un elemento se encuentra incluida
 en la cuasi componente de ese mismo elemento. Pero la contenci\'on puede ser propia
 en general. Mostremos que en los espacios de Stone, se da siempre la igualdad.
-Para esto, probaremos que la cuasi-componente $C$ de un elemento arbitrario es conexa.
+Para esto, probaremos que la cuasi-componente $C$ de un elemento $x$ arbitrario es conexa.
 
 Supongamos que $C = X_1 \cup X_2$, disjuntos, abiertos y cerrados.
 Como $C$ es cerrado en $X$ (intersecci\'on de cerrados), $X_1$ y $X_2$ son cerrados
 en $X$.
 Como los espacios $T_2$ y compactos son normales, podemos separar a $X_1$ de $X_2$
 mediante dos conjuntos abiertos $Y_1,Y_2$. Adem\'as $C$ queda contenido en $Y_1 \cup Y_2$.
-Por compacidad de $C$ tenemos finitos $F_1,\ldots,F_n$ abiertos y cerrados tales que
-$Q\subseteq F \subseteq Y_1 \cup Y_2$. Donde $F$ es la intersecci\'on de los $F_i$.
+Como $C$ es la intersecci\'on de todos los cerrados-abiertos que contienen a $x$, por compacidad,
+tenemos finitos $F_1,\ldots,F_n$ abiertos y cerrados tales que
+$C\subseteq F \subseteq Y_1 \cup Y_2$. Donde $F$ es la intersecci\'on de los $F_i$.
 Claramente $F$ es abierto y cerrado, pues los finitos $F_i$ lo son.
+M\'as a\'un, $F\cap Y_1$ es cerrado y abierto. Abierto es obvio.
+Cerrado, porque:
+$$\overline{F\cap Y_1} = F \cap \overline{Y_1} = F \cap ((Y_1 \cup Y_2) \cap \overline{Y_1}) = F \cap Y_1$$
+Donde el ante\'ultimo paso se da porque $F$ esta inclu\'ido en la union $Y_1 \cup Y_2$ y asociatividad
+de la intersecci\'on,
+y el \'ultimo por distributividad y porque la clausura de $Y_1$ est\'a en el complemento de $Y_2$,
+por ser $Y_2$ cerrado y disjunto de $Y_1$.
 
 Ahora, como $x\in Y_1\cap F$, tenemos $C \subseteq Y_1\cap F$. Y, por lo tanto
 $X_2 \subseteq C \subseteq Y_1 \cap F \subseteq Y_1$.
