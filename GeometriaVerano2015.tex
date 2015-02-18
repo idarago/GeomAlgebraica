@@ -222,8 +222,26 @@ claramente lo es, pues de hecho es nulo antes de concientar. Luego $\mathfrak{p}
 primo.
 
 Concluyamos probando que la funci\'on definida es un homeomorfismo.
+Como ambos espacios son $T_2$ y compactos, y la funci\'on es biyectiva, basta probar
+que la misma, o su inversa, manda abiertos en abiertos, o cerrados en cerrados.
 
+Mostremos que $\phi$ manda cerrados en cerrados. Dado un $Y\subseteq X$ cerrado,
+proponemos la igualdad:
+$$\phi(Y) = V(\{f : f(Y) = \{0\}\})$$
+Es claro que un ideal en $\phi(Y)$ est\'a contenido en el lado derecho. Pues
+el ideal de las funciones que se anula en un cierto $y\in Y$ contiene a todas las funciones
+que se anulan en todo $Y$.
+Por otro lado, supongamos que tenemos un ideal primo que contiene a todas las funciones que
+se anulan en $Y$, pero cuyo $x\in X$ correspondiente no est\'a en $Y$.
+Utilizando el lema nuevamente, conseguimos una partici\'on para $x$ y cada $y\in Y$.
+Ahora, los conjuntos para cada $y$ forman un cubrimiento de $Y$, y, por la compacidad de $Y$
+(por ser cerrado), conseguimos un subcubrimiento finito. Ahora, uniendo estos conjuntos, obtenemos
+una partici\'on de $X$ tal que $Y$ se encuentra contenido completamente en uno de los conjuntos
+y $x$ est\'a en el otro. Luego tenemos una funci\'on que se anula en todo $Y$, pero que no se
+anula en $x$, contradiciendo que todas las funciones que se anulan en $Y$ est\'en incluidas
+en el ideal primo.
 
+Esto concluye la demostraci\'on.
 \end{proof}
 \end{prop}
 

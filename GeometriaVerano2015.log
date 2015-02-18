@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.2.9)  17 FEB 2015 19:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.2.9)  18 FEB 2015 02:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -943,9 +943,9 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 157.
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 158.
  [2] [3]
-Overfull \hbox (2.37523pt too wide) in paragraph at lines 187--192
+Overfull \hbox (2.37523pt too wide) in paragraph at lines 188--193
 []\OT1/ppl/m/n/10.95 Mostremos aho-ra el ho-meo-mor-fis-mo. Con-si-de-ra-mos $\
 OML/zplm/m/it/10.95 ^^^ \OT1/zplm/m/n/10.95 : \OML/zplm/m/it/10.95 X \OMS/zplm/
 m/n/10.95 ! []\OT1/zplm/m/n/10.95 (\U/rsfs/m/n/10.95 C[]\OT1/zplm/m/n/10.95 (\O
@@ -953,7 +953,7 @@ ML/zplm/m/it/10.95 X\OT1/zplm/m/n/10.95 ))$
  []
 
 
-Overfull \hbox (17.70853pt too wide) in paragraph at lines 203--206
+Overfull \hbox (17.70853pt too wide) in paragraph at lines 204--207
 []\OT1/ppl/m/n/10.95 La so-bre-yec-ti-vi-dad es m[]as in-tere-san-te. Da-do un 
 $\U/euf/m/n/10.95 p$ \OT1/ppl/m/n/10.95 ideal pri-mo de $[]\OT1/zplm/m/n/10.95 
 (\U/rsfs/m/n/10.95 C[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 X\OT1/zplm/m/n/
@@ -967,7 +967,7 @@ LaTeX Info: Redefining \% on input line 7.
 Here is how much of TeX's memory you used:
  16059 strings out of 493108
  310547 string characters out of 6140726
- 367588 words of memory out of 5000000
+ 367587 words of memory out of 5000000
  19149 multiletter control sequences out of 15000+600000
  23277 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -984,7 +984,7 @@ ts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
 ist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw
 /palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on GeometriaVerano2015.pdf (5 pages, 123143 bytes).
+Output written on GeometriaVerano2015.pdf (5 pages, 124663 bytes).
 PDF statistics:
  76 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
